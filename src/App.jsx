@@ -5,7 +5,6 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Home from './pages/Home'
 import CondoFast from './pages/CondoFast'
-import TicketFast from './pages/TicketFast'
 import Contact from './pages/Contact'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 import TermsAndConditions from './pages/TermsAndConditions'
@@ -22,7 +21,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/condofast" element={<CondoFast />} />
-          <Route path="/ticketfast" element={<TicketFast />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/termini-e-condizioni" element={<TermsAndConditions />} />

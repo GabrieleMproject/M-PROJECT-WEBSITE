@@ -15,7 +15,7 @@ export default function Home() {
       </div>
 
       {/* Products Grid */}
-      <div className="max-w-6xl mx-auto mt-24 grid md:grid-cols-2 gap-8">
+      <div className="max-w-2xl mx-auto mt-24">
         
         {/* CondoFast Card */}
         <Link to="/condofast" className="group block h-full">
@@ -27,21 +27,6 @@ export default function Home() {
               </p>
             </div>
             <div className="mt-12 flex items-center text-blue-600 font-medium group-hover:gap-2 transition-all">
-              Scopri di più <span className="text-xl ml-1 group-hover:translate-x-1 transition-transform">→</span>
-            </div>
-          </div>
-        </Link>
-
-        {/* TicketFast Card */}
-        <Link to="/ticketfast" className="group block h-full">
-          <div className="h-full bg-white/70 backdrop-blur-md border border-white/20 shadow-lg rounded-3xl p-10 md:p-14 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 flex flex-col justify-between">
-            <div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-4 group-hover:text-purple-600 transition-colors">TicketFAST</h3>
-              <p className="text-lg text-gray-600 font-light leading-relaxed">
-                La piattaforma definitiva per la biglietteria e la gestione eventi. Fluida, sicura, immediata.
-              </p>
-            </div>
-            <div className="mt-12 flex items-center text-purple-600 font-medium group-hover:gap-2 transition-all">
               Scopri di più <span className="text-xl ml-1 group-hover:translate-x-1 transition-transform">→</span>
             </div>
           </div>
