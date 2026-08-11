@@ -14,13 +14,13 @@ export default function Footer() {
         <p className="text-gray-500">
           Sede Legale: Via Civati 23, 22031 Albavilla (CO)<br />
           P.IVA: 0431 4510134<br />
-          PEC: infomproject.pec
+          PEC: info@mproject.it
         </p>
         <div className="pt-4 flex justify-center space-x-6 text-xs text-gray-500">
           <Link to="/condofast" className="hover:text-blue-400 transition-colors">CondoFast</Link>
           <Link to="/ticketfast" className="hover:text-purple-400 transition-colors">TicketFast</Link>
-          <a href="#" className="hover:text-gray-300 transition-colors">Privacy Policy</a>
-          <a href="#" className="hover:text-gray-300 transition-colors">Termini e Condizioni</a>
+          <Link to="/privacy-policy" className="hover:text-gray-300 transition-colors">Privacy Policy</Link>
+          <Link to="/termini-e-condizioni" className="hover:text-gray-300 transition-colors">Termini e Condizioni</Link>
         </div>
         <div className="pt-4 text-xs text-gray-600">
           © {new Date().getFullYear()} M Project SRL. Tutti i diritti riservati.

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -10,14 +11,15 @@ export default function Contact() {
   });
   const [status, setStatus] = useState('idle'); // idle, loading, success, error
   const [errorMessage, setErrorMessage] = useState('');
+  const { executeRecaptcha } = useGoogleReCaptcha();
 
   const services = [
-    '🏢 Sviluppo Piattaforma Web / SaaS',
-    '📱 Sviluppo App Mobile',
-    '🌐 Realizzazione Sito Web / Vetrina',
-    '⚙️ Consulenza IT & Automazione',
-    '🎫 Biglietteria ed Eventi (TicketFast)',
-    '💡 Altro / Richiesta Generica'
+    'Sviluppo Piattaforma Web / SaaS',
+    'Sviluppo App Mobile',
+    'Realizzazione Sito Web / Vetrina',
+    'Consulenza IT & Automazione',
+    'Biglietteria ed Eventi (TicketFast)',
+    'Altro / Richiesta Generica'
   ];
 
   const handleChange = (e) => {
@@ -29,13 +31,22 @@ export default function Contact() {
     setStatus('loading');
     setErrorMessage('');
 
+    if (!executeRecaptcha) {
+      setStatus('error');
+      setErrorMessage('Verifica di sicurezza non pronta. Riprova tra qualche istante.');
+      return;
+    }
+
     try {
+      // Ottiene il token da reCAPTCHA v3 (invisibile)
+      const token = await executeRecaptcha('contact_submit');
+
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify({ ...formData, recaptchaToken: token })
       });
 
       const data = await response.json();
@@ -83,7 +94,7 @@ export default function Contact() {
                 <div>
                   <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-1">Contatti Ufficiali</h4>
                   <p className="text-gray-700 font-medium">Email: <a href="mailto:info@mprojectsrl.it" className="text-blue-600 hover:underline">info@mprojectsrl.it</a></p>
-                  <p className="text-gray-700 font-medium">PEC: <span className="text-gray-600">infomproject.pec</span></p>
+                  <p className="text-gray-700 font-medium">PEC: <span className="text-gray-600">info@mproject.it</span></p>
                 </div>
               </div>
             </div>
@@ -196,7 +207,7 @@ export default function Contact() {
                       className="mt-1 w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 cursor-pointer"
                     />
                     <label htmlFor="privacy" className="text-sm text-gray-500 leading-relaxed cursor-pointer">
-                      Dichiaro di aver letto la <a href="#" className="text-blue-600 hover:underline">Privacy Policy</a> e acconsento al trattamento dei miei dati personali per la gestione della richiesta. *
+                      Dichiaro di aver letto la <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Privacy Policy</a> e acconsento al trattamento dei miei dati personali per la gestione della richiesta. *
                     </label>
                   </div>
 
