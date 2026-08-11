@@ -10,12 +10,12 @@ export default function TermsAndConditions() {
         
         <div className="space-y-6 text-gray-700 font-light leading-relaxed">
           <p>
-            Le presenti Condizioni d'Uso disciplinano l'accesso e l'utilizzo del sito web di M Project SRL. Accedendo al sito, l'utente accetta i termini qui riportati.
+            Le presenti Condizioni d'Uso disciplinano l'accesso e l'utilizzo del sito web di M PROJECT S.R.L. Accedendo al sito, l'utente accetta i termini qui riportati.
           </p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">1. Proprietà Intellettuale</h2>
           <p>
-            Tutti i contenuti presenti sul sito (testi, grafiche, loghi, software, ecc.) sono di proprietà esclusiva di M Project SRL o dei rispettivi licenzianti e sono protetti dalle leggi vigenti sul diritto d'autore e sulla proprietà intellettuale. Ne è vietata la riproduzione, totale o parziale, senza il nostro esplicito consenso scritto.
+            Tutti i contenuti presenti sul sito (testi, grafiche, loghi, software, ecc.) sono di proprietà esclusiva di M PROJECT S.R.L. o dei rispettivi licenzianti e sono protetti dalle leggi vigenti sul diritto d'autore e sulla proprietà intellettuale. Ne è vietata la riproduzione, totale o parziale, senza il nostro esplicito consenso scritto.
           </p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">2. Utilizzo del Sito</h2>
@@ -30,12 +30,12 @@ export default function TermsAndConditions() {
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">3. Limitazione di Responsabilità</h2>
           <p>
-            M Project SRL si impegna a mantenere le informazioni sul sito accurate e aggiornate, ma non fornisce alcuna garanzia, esplicita o implicita, sulla loro completezza o precisione. Non saremo responsabili per eventuali danni diretti o indiretti derivanti dall'utilizzo del sito.
+            M PROJECT S.R.L. si impegna a mantenere le informazioni sul sito accurate e aggiornate, ma non fornisce alcuna garanzia, esplicita o implicita, sulla loro completezza o precisione. Non saremo responsabili per eventuali danni diretti o indiretti derivanti dall'utilizzo del sito.
           </p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">4. Siti di Terze Parti</h2>
           <p>
-            Il nostro sito potrebbe contenere link a siti web di terzi. M Project SRL non ha alcun controllo su tali siti e non si assume alcuna responsabilità per i loro contenuti o per le rispettive policy sulla privacy.
+            Il nostro sito potrebbe contenere link a siti web di terzi. M PROJECT S.R.L. non ha alcun controllo su tali siti e non si assume alcuna responsabilità per i loro contenuti o per le rispettive policy sulla privacy.
           </p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">5. Legge Applicabile e Foro Competente</h2>

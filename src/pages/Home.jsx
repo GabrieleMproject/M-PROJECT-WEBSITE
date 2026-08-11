@@ -10,7 +10,7 @@ export default function Home() {
           <span className="text-gray-400">Oggi.</span>
         </h1>
         <p className="text-xl md:text-2xl text-gray-600 font-light max-w-2xl mx-auto leading-relaxed">
-          M Project SRL crea soluzioni software avanzate per semplificare la vita dei professionisti.
+          M PROJECT S.R.L. crea soluzioni software avanzate per semplificare la vita dei professionisti.
         </p>
       </div>
 
@@ -21,7 +21,7 @@ export default function Home() {
         <Link to="/condofast" className="group block h-full">
           <div className="h-full bg-white/70 backdrop-blur-md border border-white/20 shadow-lg rounded-3xl p-10 md:p-14 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 flex flex-col justify-between">
             <div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">CondoFast</h3>
+              <h3 className="text-3xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">CondoFAST</h3>
               <p className="text-lg text-gray-600 font-light leading-relaxed">
                 Il gestionale cloud di ultima generazione per gli amministratori di condominio. Veloce, intelligente, ovunque.
               </p>
@@ -36,7 +36,7 @@ export default function Home() {
         <Link to="/ticketfast" className="group block h-full">
           <div className="h-full bg-white/70 backdrop-blur-md border border-white/20 shadow-lg rounded-3xl p-10 md:p-14 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 flex flex-col justify-between">
             <div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-4 group-hover:text-purple-600 transition-colors">TicketFast</h3>
+              <h3 className="text-3xl font-bold text-gray-900 mb-4 group-hover:text-purple-600 transition-colors">TicketFAST</h3>
               <p className="text-lg text-gray-600 font-light leading-relaxed">
                 La piattaforma definitiva per la biglietteria e la gestione eventi. Fluida, sicura, immediata.
               </p>

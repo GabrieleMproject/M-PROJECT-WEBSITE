@@ -36,7 +36,7 @@ export default function TicketFast() {
         </div>
         <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-gray-900">
           Vendi, scansiona e vivi. <br className="hidden md:block"/>
-          <span className="text-purple-600">Con TicketFast.</span>
+          <span className="text-purple-600">Con TicketFAST.</span>
         </h1>
         <p className="text-xl md:text-2xl text-gray-600 font-light max-w-3xl mx-auto leading-relaxed">
           La piattaforma software per la gestione completa di eventi e biglietteria, pensata per offrire un'esperienza fluida agli organizzatori e agli spettatori.

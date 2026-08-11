@@ -18,7 +18,7 @@ export default function Contact() {
     'Sviluppo App Mobile',
     'Realizzazione Sito Web / Vetrina',
     'Consulenza IT & Automazione',
-    'Biglietteria ed Eventi (TicketFast)',
+    '🎫 Biglietteria ed Eventi (TicketFAST)',
     'Altro / Richiesta Generica'
   ];
 

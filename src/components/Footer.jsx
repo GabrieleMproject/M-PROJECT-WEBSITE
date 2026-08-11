@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="max-w-4xl mx-auto space-y-6">
         <div className="flex justify-center mb-4">
           <Link to="/" className="hover:opacity-100 transition-opacity opacity-90">
-            <img src={logoNegative} alt="M Project Logo" className="h-10 md:h-12 w-auto" />
+            <img src={logoNegative} alt="M PROJECT S.R.L. Logo" className="h-10 md:h-12 w-auto" />
           </Link>
         </div>
         <p className="text-gray-500">
@@ -17,13 +17,13 @@ export default function Footer() {
           PEC: info@mproject.it
         </p>
         <div className="pt-4 flex justify-center space-x-6 text-xs text-gray-500">
-          <Link to="/condofast" className="hover:text-blue-400 transition-colors">CondoFast</Link>
-          <Link to="/ticketfast" className="hover:text-purple-400 transition-colors">TicketFast</Link>
+          <Link to="/condofast" className="hover:text-blue-400 transition-colors">CondoFAST</Link>
+          <Link to="/ticketfast" className="hover:text-purple-400 transition-colors">TicketFAST</Link>
           <Link to="/privacy-policy" className="hover:text-gray-300 transition-colors">Privacy Policy</Link>
           <Link to="/termini-e-condizioni" className="hover:text-gray-300 transition-colors">Termini e Condizioni</Link>
         </div>
         <div className="pt-4 text-xs text-gray-600">
-          © {new Date().getFullYear()} M Project SRL. Tutti i diritti riservati.
+          © {new Date().getFullYear()} M PROJECT S.R.L. Tutti i diritti riservati.
         </div>
       </div>
     </footer>

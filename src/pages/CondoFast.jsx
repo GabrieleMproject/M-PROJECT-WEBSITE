@@ -36,7 +36,7 @@ export default function CondoFast() {
         </div>
         <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-gray-900">
           Amministra in modo intelligente. <br className="hidden md:block"/>
-          <span className="text-blue-600">Scopri CondoFast.</span>
+          <span className="text-blue-600">Scopri CondoFAST.</span>
         </h1>
         <p className="text-xl md:text-2xl text-gray-600 font-light max-w-3xl mx-auto leading-relaxed">
           Il SaaS definitivo per la gestione condominiale. Progettato per abbattere i tempi burocratici e rimettere al centro il valore del tuo lavoro.
@@ -72,7 +72,7 @@ export default function CondoFast() {
         <div className="space-y-6">
           <div className="bg-white/70 backdrop-blur-md border border-gray-100 shadow-md rounded-2xl p-6 md:p-8">
             <h4 className="text-xl font-bold text-gray-900 mb-2">Serve installare qualche software sul PC?</h4>
-            <p className="text-gray-600">Assolutamente no. CondoFast è 100% in cloud. Ti basta un browser web per accedere da PC, Mac, tablet o smartphone ovunque ti trovi.</p>
+            <p className="text-gray-600">Assolutamente no. CondoFAST è 100% in cloud. Ti basta un browser web per accedere da PC, Mac, tablet o smartphone ovunque ti trovi.</p>
           </div>
           <div className="bg-white/70 backdrop-blur-md border border-gray-100 shadow-md rounded-2xl p-6 md:p-8">
             <h4 className="text-xl font-bold text-gray-900 mb-2">Posso importare i dati dal mio vecchio gestionale?</h4>
@@ -92,7 +92,7 @@ export default function CondoFast() {
         <div className="relative z-10">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">La nostra Visione</h2>
           <p className="text-xl md:text-2xl font-light text-blue-100 leading-relaxed mb-10">
-            Crediamo che l'amministratore di condominio non debba essere un passacarte, ma un vero manager. CondoFast nasce per liberarti dalla routine e darti il controllo totale, ovunque ti trovi.
+            Crediamo che l'amministratore di condominio non debba essere un passacarte, ma un vero manager. CondoFAST nasce per liberarti dalla routine e darti il controllo totale, ovunque ti trovi.
           </p>
           <Link to="/" className="text-white border border-white/30 hover:bg-white/10 px-6 py-3 rounded-full font-medium transition-colors">
             Torna alla Home

@@ -10,12 +10,12 @@ export default function PrivacyPolicy() {
         
         <div className="space-y-6 text-gray-700 font-light leading-relaxed">
           <p>
-            Ai sensi del Regolamento (UE) 2016/679 (GDPR), questa pagina descrive le modalità di trattamento dei dati personali degli utenti che consultano il sito web di M Project SRL.
+            Ai sensi del Regolamento (UE) 2016/679 (GDPR), questa pagina descrive le modalità di trattamento dei dati personali degli utenti che consultano il sito web di M PROJECT S.R.L.
           </p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">1. Titolare del Trattamento</h2>
           <p>
-            Il Titolare del trattamento è <strong>M Project SRL</strong><br/>
+            Il Titolare del trattamento è <strong>M PROJECT S.R.L.</strong><br/>
             Sede Legale: Via Civati 23, 22031 Albavilla (CO)<br/>
             P.IVA: 0431 4510134<br/>
             Email: <a href="mailto:info@mprojectsrl.it" className="text-blue-600 hover:underline">info@mprojectsrl.it</a><br/>
