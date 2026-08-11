@@ -228,6 +228,9 @@ export default function Contact() {
                       'Invia Richiesta'
                     )}
                   </button>
+                  <p className="text-xs text-center text-gray-400 mt-4 leading-relaxed">
+                    Questo sito è protetto da reCAPTCHA e si applicano la <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Privacy Policy</a> e i <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Termini di Servizio</a> di Google.
+                  </p>
                 </form>
               )}
             </div>
