@@ -5,6 +5,7 @@ import Footer from './components/Footer'
 import Home from './pages/Home'
 import CondoFast from './pages/CondoFast'
 import TicketFast from './pages/TicketFast'
+import Contact from './pages/Contact'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/condofast" element={<CondoFast />} />
         <Route path="/ticketfast" element={<TicketFast />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
     </div>

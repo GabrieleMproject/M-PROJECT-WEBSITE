@@ -15,9 +15,9 @@ export default function Navbar() {
         <Link to="/ticketfast" className="hidden md:block text-sm font-medium text-gray-600 hover:text-purple-600 transition-colors">
           TicketFast
         </Link>
-        <a href="mailto:info@mprojectsrl.it" className="text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-full transition-colors shadow-md">
+        <Link to="/contact" className="text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-full transition-colors shadow-md">
           Contattaci
-        </a>
+        </Link>
       </div>
     </nav>
   );
