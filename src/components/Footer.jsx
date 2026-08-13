@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logoNegative from '../assets/logo-negative.svg';
+import logoNegative from '../assets/logo-highres.jpg';
 
 export default function Footer() {
   return (
@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="max-w-4xl mx-auto space-y-6">
         <div className="flex justify-center mb-4">
           <Link to="/" className="hover:opacity-100 transition-opacity opacity-90">
-            <img src={logoNegative} alt="M PROJECT S.R.L. Logo" className="h-10 md:h-12 w-auto" />
+            <img src={logoNegative} alt="M PROJECT S.R.L. Logo" className="h-10 md:h-12 w-auto invert mix-blend-screen" />
           </Link>
         </div>
         <p className="text-gray-500">
