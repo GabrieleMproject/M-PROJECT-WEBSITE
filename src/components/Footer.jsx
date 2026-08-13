@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logoNegative from '../assets/logo-highres.jpg';
+import logoNegative from '../assets/logo-negative.svg';
 
 export default function Footer() {
   return (
     <footer className="bg-gray-900 py-16 px-6 text-center text-gray-400 text-sm mt-auto rounded-t-3xl md:rounded-t-[3rem] mx-4 md:mx-8 mb-0 md:mb-0 shadow-2xl">
       <div className="max-w-4xl mx-auto space-y-6">
         <div className="flex justify-center mb-4">
-          <Link to="/" className="hover:opacity-100 transition-opacity opacity-90 block h-12 md:h-16 relative">
-            <img src={logoNegative} alt="M PROJECT S.R.L. Logo" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-28 md:h-36 w-auto max-w-none invert mix-blend-screen" />
+          <Link to="/" className="hover:opacity-100 transition-opacity opacity-90">
+            <img src={logoNegative} alt="M PROJECT S.R.L. Logo" className="h-10 md:h-12 w-auto" />
           </Link>
         </div>
         <p className="text-gray-500">
