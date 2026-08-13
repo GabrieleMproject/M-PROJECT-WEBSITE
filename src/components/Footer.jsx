@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logoNegative from '../assets/logo-clean.png';
+import logoNegative from '../assets/logo-perfect.png';
 
 export default function Footer() {
   return (
