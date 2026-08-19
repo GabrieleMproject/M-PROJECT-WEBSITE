@@ -24,3 +24,155 @@ body {
 .grecaptcha-badge {
   visibility: hidden !important;
 }
+
+/* ─── CondoFAST Dynamic Logo & Hover Animations ─── */
+.condofast-logo-container {
+  cursor: pointer;
+  perspective: 1000px;
+}
+
+.condofast-icon {
+  display: inline-block;
+  vertical-align: middle;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.condofast-logo-container:hover .condofast-icon,
+.group:hover .condofast-icon {
+  transform: scale(1.08) translateY(-2px);
+}
+
+/* Effetto di elevazione 3D isometrico all'hover */
+.tower-left, .tower-center, .tower-right {
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.condofast-logo-container:hover .tower-left,
+.group:hover .tower-left {
+  transform: translateY(-3px) translateX(-1px);
+}
+
+.condofast-logo-container:hover .tower-center,
+.group:hover .tower-center {
+  transform: translateY(-6px);
+}
+
+.condofast-logo-container:hover .tower-right,
+.group:hover .tower-right {
+  transform: translateY(-4.5px) translateX(1.5px);
+}
+
+.condofast-logo-container:hover .smart-flow-line,
+.group:hover .smart-flow-line {
+  filter: drop-shadow(0 0 6px rgba(236, 72, 153, 0.8));
+  stroke-width: 5.5px;
+}
+
+/* Animazione Fogli Volanti */
+.condofast-logo-container:hover .sheet-1,
+.group:hover .sheet-1 {
+  animation: fly-sheet-1 2.4s infinite ease-in-out;
+}
+
+.condofast-logo-container:hover .sheet-2,
+.group:hover .sheet-2 {
+  animation: fly-sheet-2 2.4s infinite ease-in-out 0.4s;
+}
+
+.condofast-logo-container:hover .sheet-3,
+.group:hover .sheet-3 {
+  animation: fly-sheet-3 2.4s infinite ease-in-out 0.8s;
+}
+
+@keyframes fly-sheet-1 {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(0);
+    opacity: 0;
+  }
+  6% {
+    transform: translate(0, 0) rotate(5deg) scale(1);
+    opacity: 1;
+  }
+  25% {
+    transform: translate(calc(var(--logo-size, 48px) * 0.2), calc(var(--logo-size, 48px) * -0.12)) rotate(20deg) scale(1.2);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(calc(var(--logo-size, 48px) * 0.6), calc(var(--logo-size, 48px) * 0.05)) rotate(-15deg) scale(1.1);
+    opacity: 1;
+  }
+  75% {
+    transform: translate(calc(var(--logo-size, 48px) * 1.15), calc(var(--logo-size, 48px) * -0.1)) rotate(25deg) scale(0.95);
+    opacity: 1;
+  }
+  90% {
+    transform: translate(calc(var(--logo-size, 48px) * 1.04), calc(var(--logo-size, 48px) * -0.07)) rotate(0deg) scale(0.5);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(calc(var(--logo-size, 48px) * 1.06), calc(var(--logo-size, 48px) * -0.07)) rotate(0deg) scale(0.2);
+    opacity: 0;
+  }
+}
+
+@keyframes fly-sheet-2 {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(0);
+    opacity: 0;
+  }
+  6% {
+    transform: translate(0, 0) rotate(-5deg) scale(1);
+    opacity: 1;
+  }
+  25% {
+    transform: translate(calc(var(--logo-size, 48px) * 0.22), calc(var(--logo-size, 48px) * -0.16)) rotate(-25deg) scale(1.2);
+    opacity: 1;
+  }
+  55% {
+    transform: translate(calc(var(--logo-size, 48px) * 0.75), calc(var(--logo-size, 48px) * 0.02)) rotate(20deg) scale(1.1);
+    opacity: 1;
+  }
+  80% {
+    transform: translate(calc(var(--logo-size, 48px) * 1.25), calc(var(--logo-size, 48px) * -0.08)) rotate(-10deg) scale(0.95);
+    opacity: 1;
+  }
+  92% {
+    transform: translate(calc(var(--logo-size, 48px) * 1.59), calc(var(--logo-size, 48px) * -0.04)) rotate(90deg) scale(0.5);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(calc(var(--logo-size, 48px) * 1.62), calc(var(--logo-size, 48px) * -0.04)) rotate(90deg) scale(0.2);
+    opacity: 0;
+  }
+}
+
+@keyframes fly-sheet-3 {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(0);
+    opacity: 0;
+  }
+  6% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+  25% {
+    transform: translate(calc(var(--logo-size, 48px) * 0.15), calc(var(--logo-size, 48px) * -0.08)) rotate(15deg) scale(1.2);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(calc(var(--logo-size, 48px) * 0.5), calc(var(--logo-size, 48px) * 0.15)) rotate(-25deg) scale(1.1);
+    opacity: 1;
+  }
+  75% {
+    transform: translate(calc(var(--logo-size, 48px) * 1.1), calc(var(--logo-size, 48px) * 0.05)) rotate(20deg) scale(0.95);
+    opacity: 1;
+  }
+  92% {
+    transform: translate(calc(var(--logo-size, 48px) * 0.98), calc(var(--logo-size, 48px) * 0.12)) rotate(-110deg) scale(0.5);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(calc(var(--logo-size, 48px) * 1.0), calc(var(--logo-size, 48px) * 0.12)) rotate(-110deg) scale(0.2);
+    opacity: 0;
+  }
+}

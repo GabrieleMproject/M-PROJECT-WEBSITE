@@ -8,7 +8,7 @@ export function CondoFastIcon({ size = 48, className = '' }) {
       viewBox="0 0 100 100"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={`inline-block align-middle transition-transform duration-300 ${className}`}
+      className={`condofast-icon ${className}`}
       style={{ overflow: 'visible' }}
     >
       <defs>
@@ -40,7 +40,7 @@ export function CondoFastIcon({ size = 48, className = '' }) {
       </defs>
 
       {/* Torre 1 (Sinistra) */}
-      <g>
+      <g className="tower-left">
         <path d="M 20 55 L 35 63 L 35 85 L 20 77 Z" fill="url(#mpWD)" />
         <path d="M 35 63 L 50 55 L 50 77 L 35 85 Z" fill="url(#mpWL)" />
         <path d="M 20 55 L 35 47 L 50 55 L 35 63 Z" fill="url(#mpWH)" />
@@ -51,7 +51,7 @@ export function CondoFastIcon({ size = 48, className = '' }) {
       </g>
 
       {/* Torre 2 (Centro) */}
-      <g>
+      <g className="tower-center">
         <path d="M 38 38 L 53 46 L 53 78 L 38 70 Z" fill="url(#mpWD)" />
         <path d="M 53 46 L 68 38 L 68 70 L 53 78 Z" fill="url(#mpWL)" />
         <path d="M 38 38 L 53 30 L 68 38 L 53 46 Z" fill="url(#mpWH)" opacity="0.95" />
@@ -64,7 +64,7 @@ export function CondoFastIcon({ size = 48, className = '' }) {
       </g>
 
       {/* Torre 3 (Destra) */}
-      <g>
+      <g className="tower-right">
         <path d="M 56 25 L 71 33 L 71 68 L 56 60 Z" fill="url(#mpWD)" />
         <path d="M 71 33 L 86 25 L 86 60 L 71 68 Z" fill="url(#mpWL)" />
         <path d="M 56 25 L 71 17 L 86 25 L 71 33 Z" fill="url(#mpWH)" opacity="0.9" />
@@ -85,15 +85,44 @@ export function CondoFastIcon({ size = 48, className = '' }) {
         strokeWidth="4.5"
         strokeLinecap="round"
         filter="url(#mpNG)"
+        className="smart-flow-line"
       />
+
+      {/* Fogli volanti interattivi */}
+      <g className="fly-sheet sheet-1" style={{ opacity: 0 }}>
+        <path d="M 36.5 52 L 42 52 L 44 54 L 44 62 L 36.5 62 Z" fill="#ffffff" stroke="#2563eb" strokeWidth="0.4" />
+        <path d="M 42 52 L 42 54 L 44 54 Z" fill="#cbd5e1" stroke="#2563eb" strokeWidth="0.4" />
+        <line x1="38" y1="55.5" x2="42.5" y2="55.5" stroke="#94a3b8" strokeWidth="0.4" />
+        <line x1="38" y1="57.5" x2="42.5" y2="57.5" stroke="#94a3b8" strokeWidth="0.4" />
+        <line x1="38" y1="59.5" x2="41" y2="59.5" stroke="#94a3b8" strokeWidth="0.4" />
+      </g>
+
+      <g className="fly-sheet sheet-2" style={{ opacity: 0 }}>
+        <path d="M 44 48.7 L 49.5 48.7 L 51.5 50.7 L 51.5 58.7 L 44 58.7 Z" fill="#ffffff" stroke="#06b6d4" strokeWidth="0.4" />
+        <path d="M 49.5 48.7 L 49.5 50.7 L 51.5 50.7 Z" fill="#cbd5e1" stroke="#06b6d4" strokeWidth="0.4" />
+        <line x1="45.5" y1="52.2" x2="50" y2="52.2" stroke="#94a3b8" strokeWidth="0.4" />
+        <line x1="45.5" y1="54.2" x2="49" y2="54.2" stroke="#94a3b8" strokeWidth="0.4" />
+        <line x1="45.5" y1="56.2" x2="50" y2="56.2" stroke="#94a3b8" strokeWidth="0.4" />
+      </g>
+
+      <g className="fly-sheet sheet-3" style={{ opacity: 0 }}>
+        <path d="M 54.5 33 L 60 33 L 62 35 L 62 43 L 54.5 43 Z" fill="#ffffff" stroke="#c084fc" strokeWidth="0.4" />
+        <path d="M 60 33 L 60 35 L 62 35 Z" fill="#cbd5e1" stroke="#c084fc" strokeWidth="0.4" />
+        <line x1="56" y1="36.5" x2="60.5" y2="36.5" stroke="#94a3b8" strokeWidth="0.4" />
+        <line x1="56" y1="38.5" x2="60.5" y2="38.5" stroke="#94a3b8" strokeWidth="0.4" />
+        <line x1="56" y1="40.5" x2="59" y2="40.5" stroke="#94a3b8" strokeWidth="0.4" />
+      </g>
     </svg>
   );
 }
 
-export default function CondoFastLogo({ size = 40, theme = 'dark', showText = true, className = '' }) {
+export default function CondoFastLogo({ size = 48, theme = 'dark', showText = true, className = '' }) {
   const isDark = theme === 'dark';
   return (
-    <div className={`inline-flex items-center gap-3 select-none ${className}`}>
+    <div
+      className={`condofast-logo-container inline-flex items-center gap-3 select-none ${className}`}
+      style={{ '--logo-size': `${size}px` }}
+    >
       <CondoFastIcon size={size} />
       {showText && (
         <span className="text-2xl md:text-3xl font-extrabold tracking-tight" style={{ fontFamily: 'Sora, sans-serif' }}>
