@@ -60,7 +60,7 @@ export default function CondoFast() {
       </div>
 
       {/* Features Grid */}
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 mb-24">
+      <div id="features" className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 mb-24 scroll-mt-28">
         {features.map((feature, index) => (
           <div key={index} className="group bg-white/70 backdrop-blur-md border border-gray-100 shadow-xl rounded-3xl p-8 md:p-12 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
             <div className="h-16 w-16 bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-200 rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">

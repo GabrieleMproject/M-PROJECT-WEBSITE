@@ -9,6 +9,7 @@ import Contact from './pages/Contact'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 import TermsAndConditions from './pages/TermsAndConditions'
 import CookieBanner from './components/CookieBanner'
+import ScrollToTop from './components/ScrollToTop'
 
 function App() {
   // Nota: Questa è una dummy key. In produzione servirà la vera Site Key.
@@ -16,6 +17,7 @@ function App() {
 
   return (
     <GoogleReCaptchaProvider reCaptchaKey={reCaptchaKey}>
+      <ScrollToTop />
       <div className="min-h-screen flex flex-col font-sans selection:bg-blue-200">
         <Navbar />
         <Routes>
