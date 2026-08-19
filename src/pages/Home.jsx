@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import CondoFastLogo, { CondoFastIcon } from '../components/CondoFastLogo';
 
 export default function Home() {
   return (
@@ -21,7 +22,9 @@ export default function Home() {
         <Link to="/condofast" className="group block h-full">
           <div className="h-full bg-white/70 backdrop-blur-md border border-white/20 shadow-lg rounded-3xl p-10 md:p-14 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 flex flex-col justify-between">
             <div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">CondoFAST</h3>
+              <div className="mb-6">
+                <CondoFastLogo size={44} theme="light" className="group-hover:scale-105 transition-transform" />
+              </div>
               <p className="text-lg text-gray-600 font-light leading-relaxed">
                 Il gestionale cloud di ultima generazione per gli amministratori di condominio. Veloce, intelligente, ovunque.
               </p>

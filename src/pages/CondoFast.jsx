@@ -1,6 +1,7 @@
 import React from 'react';
 import { Building2, CloudLightning, ShieldCheck, Cpu, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import CondoFastLogo, { CondoFastIcon } from '../components/CondoFastLogo';
 
 export default function CondoFast() {
   const features = [
@@ -31,6 +32,11 @@ export default function CondoFast() {
       
       {/* Hero Section */}
       <div className="max-w-5xl mx-auto text-center space-y-8 mb-24">
+        <div className="flex justify-center mb-2">
+          <div className="p-4 bg-white/80 backdrop-blur-md rounded-3xl shadow-lg border border-gray-100 inline-flex items-center">
+            <CondoFastLogo size={52} theme="light" />
+          </div>
+        </div>
         <div className="inline-block px-4 py-1.5 rounded-full bg-blue-100 text-blue-700 font-semibold text-sm mb-4">
           La rivoluzione per gli amministratori
         </div>
@@ -90,6 +96,9 @@ export default function CondoFast() {
         <div className="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 bg-blue-500 rounded-full blur-3xl opacity-30"></div>
         <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-64 h-64 bg-indigo-500 rounded-full blur-3xl opacity-30"></div>
         <div className="relative z-10">
+          <div className="flex justify-center mb-6">
+            <CondoFastLogo size={44} theme="dark" />
+          </div>
           <h2 className="text-3xl md:text-5xl font-bold mb-6">La nostra Visione</h2>
           <p className="text-xl md:text-2xl font-light text-blue-100 leading-relaxed mb-10">
             Crediamo che l'amministratore di condominio non debba essere un passacarte, ma un vero manager. CondoFAST nasce per liberarti dalla routine e darti il controllo totale, ovunque ti trovi.
