@@ -93,7 +93,7 @@ export default function Contact() {
                 <div>
                   <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-1">Contatti Ufficiali</h4>
                   <p className="text-gray-700 font-medium">Email: <a href="mailto:info@mprojectsrl.it" className="text-blue-600 hover:underline">info@mprojectsrl.it</a></p>
-                  <p className="text-gray-700 font-medium">PEC: <span className="text-gray-600">info@mproject.it</span></p>
+                  <p className="text-gray-700 font-medium">PEC: <span className="text-gray-600">infomproject@pec.it</span></p>
                 </div>
               </div>
             </div>

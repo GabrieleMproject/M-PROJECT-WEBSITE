@@ -13,8 +13,8 @@ export default function Footer() {
         </div>
         <p className="text-gray-500">
           Sede Legale: Via Civati 23, 22031 Albavilla (CO)<br />
-          P.IVA: 0431 4510134<br />
-          PEC: info@mproject.it
+          P.IVA: 04314510134<br />
+          PEC: infomproject@pec.it
         </p>
         <div className="pt-4 flex justify-center space-x-6 text-xs text-gray-500">
           <Link to="/condofast" className="hover:text-blue-400 transition-colors">CondoFAST</Link>
