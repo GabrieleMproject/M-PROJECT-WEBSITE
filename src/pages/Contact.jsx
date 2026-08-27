@@ -48,10 +48,17 @@ export default function Contact() {
         body: JSON.stringify({ ...formData, recaptchaToken: token })
       });
 
-      const data = await response.json();
+      let data = {};
+      const contentType = response.headers.get('content-type');
+      if (contentType && contentType.includes('application/json')) {
+        data = await response.json();
+      } else {
+        const text = await response.text();
+        console.error('Server non-JSON response:', text);
+      }
 
       if (!response.ok) {
-        throw new Error(data.error || 'Errore durante l\'invio del messaggio.');
+        throw new Error(data.error || 'Si è verificato un errore sul server durante l\'invio. Riprova più tardi.');
       }
 
       setStatus('success');
@@ -59,7 +66,7 @@ export default function Contact() {
     } catch (error) {
       console.error(error);
       setStatus('error');
-      setErrorMessage(error.message);
+      setErrorMessage(error.message || 'Errore di connessione. Controlla la tua rete e riprova.');
     }
   };
 
