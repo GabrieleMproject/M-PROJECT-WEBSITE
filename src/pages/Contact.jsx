@@ -30,15 +30,15 @@ export default function Contact() {
     setStatus('loading');
     setErrorMessage('');
 
-    if (!executeRecaptcha) {
-      setStatus('error');
-      setErrorMessage('Verifica di sicurezza non pronta. Riprova tra qualche istante.');
-      return;
-    }
-
     try {
-      // Ottiene il token da reCAPTCHA v3 (invisibile)
-      const token = await executeRecaptcha('contact_submit');
+      let token = '';
+      if (executeRecaptcha) {
+        try {
+          token = await executeRecaptcha('contact_submit');
+        } catch (recaptchaErr) {
+          console.warn('reCAPTCHA non disponibile:', recaptchaErr);
+        }
+      }
 
       const response = await fetch('/api/contact', {
         method: 'POST',
