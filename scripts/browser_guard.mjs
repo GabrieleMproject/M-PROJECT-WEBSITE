@@ -12,7 +12,7 @@ try {
   try {
     puppeteer = (await import('../../CONDOFAST.IT/Software/CondoAI2/node_modules/puppeteer-core/lib/esm/puppeteer/puppeteer-core.js')).default;
   } catch (e2) {
-    console.error('❌ Impossibile caricare puppeteer-core:', e.message);
+    console.error('❌ Impossibile caricare puppeteer-core:', e2.message);
     process.exit(1);
   }
 }
