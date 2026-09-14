@@ -1,24 +1,45 @@
 import { Resend } from 'resend';
 
 // ---------------------------------------------------------------------------
-// Rate Limiter in-memory (compatibile con Vercel Serverless Functions)
-// Nota: in ambienti con multiple istanze, considerare KV store esterno.
+// Rate Limiter: Upstash Redis (Distribuito) con fallback In-Memory
 // ---------------------------------------------------------------------------
 const ipRequestMap = new Map();
 const RATE_LIMIT_WINDOW_MS = 15 * 60 * 1000; // 15 minuti
 const RATE_LIMIT_MAX = 5;
 
-function isRateLimited(ip) {
+async function isRateLimited(ip) {
+  const upstashUrl = process.env.UPSTASH_REDIS_REST_URL;
+  const upstashToken = process.env.UPSTASH_REDIS_REST_TOKEN;
+
+  if (upstashUrl && upstashToken) {
+    try {
+      const key = `ratelimit:contact:${ip}`;
+      const pipelineReq = await fetch(`${upstashUrl}/pipeline`, {
+        method: 'POST',
+        headers: { 'Authorization': `Bearer ${upstashToken}`, 'Content-Type': 'application/json' },
+        body: JSON.stringify([
+          ['INCR', key],
+          ['EXPIRE', key, 900, 'NX']
+        ])
+      });
+      if (pipelineReq.ok) {
+        const results = await pipelineReq.json();
+        const count = results[0]?.result || 1;
+        return count > RATE_LIMIT_MAX;
+      }
+    } catch (err) {
+      console.warn('Errore Upstash Redis, fallback in-memory:', err.message);
+    }
+  }
+
+  // Fallback in-memory
   const now = Date.now();
   const record = ipRequestMap.get(ip);
-
-  // Pulizia periodica delle entry scadute per evitare memory leak
   if (ipRequestMap.size > 1000) {
     for (const [key, val] of ipRequestMap) {
       if (now - val.windowStart > RATE_LIMIT_WINDOW_MS) ipRequestMap.delete(key);
     }
   }
-
   if (!record || now - record.windowStart > RATE_LIMIT_WINDOW_MS) {
     ipRequestMap.set(ip, { windowStart: now, count: 1 });
     return false;
@@ -51,11 +72,12 @@ export default async function handler(req, res) {
   // 1. Rate Limiting per IP
   const clientIp = req.headers['x-forwarded-for']?.split(',')[0]?.trim()
                  || req.socket?.remoteAddress || 'unknown';
-  if (isRateLimited(clientIp)) {
+  if (await isRateLimited(clientIp)) {
     return res.status(429).json({
       error: 'Troppe richieste. Riprova tra qualche minuto.'
     });
   }
+
 
   const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) {
