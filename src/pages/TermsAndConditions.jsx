@@ -38,7 +38,12 @@ export default function TermsAndConditions() {
             Il nostro sito potrebbe contenere link a siti web di terzi. M PROJECT S.R.L. non ha alcun controllo su tali siti e non si assume alcuna responsabilità per i loro contenuti o per le rispettive policy sulla privacy.
           </p>
 
-          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">5. Legge Applicabile e Foro Competente</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">5. Clausola di Condizione Infrastrutturale (CondoFAST)</h2>
+          <p>
+            I piani in abbonamento "Cloud Integrato" per il software CondoFAST (agevolati a partire da 19,90€/mese) sono erogati a condizione che l'amministratore attivi i servizi di compliance e infrastruttura digitale ("Bundle Compliance Base" o "Bundle Premium App") su ciascun condominio gestito all'interno della piattaforma. In caso di mancata adozione dell'infrastruttura sui condomìni, lo Studio sarà tenuto alla sottoscrizione della Licenza Standard a prezzo pieno o alla disattivazione del servizio.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">6. Legge Applicabile e Foro Competente</h2>
           <p>
             I presenti Termini e Condizioni sono regolati dalla legge italiana. Per qualsiasi controversia derivante dall'utilizzo del sito sarà competente in via esclusiva il Foro di Como.
           </p>

@@ -90,6 +90,103 @@ export default function CondoFast() {
           </div>
         </div>
       </div>
+
+      {/* Pricing Section - Doppio Binario */}
+      <div id="pricing" className="max-w-6xl mx-auto mb-24 scroll-mt-28">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Scegli la tua soluzione ideale</h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            CondoFAST offre due modalità di accesso per adattarsi al modello di business del tuo Studio.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8 items-stretch">
+          
+          {/* Lato Sinistro - Piani Esca (Solo Licenza Studio) */}
+          <div className="bg-white border-2 border-gray-200 rounded-3xl p-8 shadow-sm flex flex-col opacity-90">
+            <div className="mb-6">
+              <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-semibold mb-4 inline-block">Standard</span>
+              <h3 className="text-2xl font-bold text-gray-900">Solo Licenza Studio</h3>
+              <p className="text-gray-500 mt-2 text-sm">Nessun adempimento e presidio normativo sui condomìni. Il software è un costo puro per il tuo Studio.</p>
+            </div>
+            
+            <div className="space-y-4 mb-8 flex-grow">
+              <div className="flex justify-between items-end border-b border-gray-100 pb-3">
+                <div>
+                  <div className="font-semibold text-gray-800">Piano Base</div>
+                  <div className="text-xs text-gray-500">Fino a 50 condomini</div>
+                </div>
+                <div className="text-xl font-bold text-gray-900">99€<span className="text-sm font-normal text-gray-500">/mese</span></div>
+              </div>
+              <div className="flex justify-between items-end border-b border-gray-100 pb-3">
+                <div>
+                  <div className="font-semibold text-gray-800">Piano Studio</div>
+                  <div className="text-xs text-gray-500">Fino a 100 condomini</div>
+                </div>
+                <div className="text-xl font-bold text-gray-900">199€<span className="text-sm font-normal text-gray-500">/mese</span></div>
+              </div>
+              <div className="flex justify-between items-end pb-3">
+                <div>
+                  <div className="font-semibold text-gray-800">Piano Professional</div>
+                  <div className="text-xs text-gray-500">Fino a 200 condomini</div>
+                </div>
+                <div className="text-xl font-bold text-gray-900">299€<span className="text-sm font-normal text-gray-500">/mese</span></div>
+              </div>
+            </div>
+            
+            <a href="https://condofast.it/app/register" className="w-full block text-center bg-gray-100 text-gray-700 py-3 rounded-xl font-bold hover:bg-gray-200 transition-colors">
+              Attiva Standard
+            </a>
+          </div>
+
+          {/* Lato Destro - Piani Target (Cloud Integrato) */}
+          <div className="bg-white border-2 border-green-500 rounded-3xl p-8 shadow-xl flex flex-col relative transform md:-translate-y-4">
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-green-500 text-white px-4 py-1 rounded-full text-sm font-bold shadow-md">
+              ★ MIGLIOR SCELTA B2B
+            </div>
+            <div className="mb-6 mt-2">
+              <h3 className="text-2xl font-bold text-green-700">Cloud Integrato</h3>
+              <p className="text-gray-600 mt-2 text-sm font-medium">Integrazione totale. Abbattimento dei costi dello Studio attraverso i Bundle Servizi Telematici sui condomìni.</p>
+            </div>
+            
+            <div className="space-y-4 mb-8 flex-grow">
+              <div className="flex justify-between items-end border-b border-green-100 pb-3">
+                <div>
+                  <div className="font-semibold text-gray-800">Piano Base</div>
+                  <div className="text-xs text-gray-500">Fino a 50 condomini</div>
+                </div>
+                <div className="text-2xl font-black text-green-600">19,90€<span className="text-sm font-normal text-gray-500">/mese</span></div>
+              </div>
+              <div className="flex justify-between items-end border-b border-green-100 pb-3">
+                <div>
+                  <div className="font-semibold text-gray-800">Piano Studio</div>
+                  <div className="text-xs text-gray-500">Fino a 100 condomini</div>
+                </div>
+                <div className="text-2xl font-black text-green-600">29,90€<span className="text-sm font-normal text-gray-500">/mese</span></div>
+              </div>
+              <div className="flex justify-between items-end pb-3">
+                <div>
+                  <div className="font-semibold text-gray-800">Piano Professional</div>
+                  <div className="text-xs text-gray-500">Fino a 200 condomini</div>
+                </div>
+                <div className="text-2xl font-black text-green-600">59,90€<span className="text-sm font-normal text-gray-500">/mese</span></div>
+              </div>
+            </div>
+            
+            <a href="https://condofast.it/app/register" className="w-full block text-center bg-green-500 text-white py-4 rounded-xl font-bold hover:bg-green-600 transition-colors shadow-lg hover:shadow-xl">
+              Inizia Ora con Cloud Integrato
+            </a>
+
+            <div className="mt-6 p-4 bg-green-50 rounded-xl border border-green-200">
+              <p className="text-xs text-green-800 leading-relaxed text-center">
+                <strong>Disclaimer di Trasparenza:</strong> Tariffa riservata agli Studi che adottano l'infrastruttura Cloud Integrata per i propri condomìni (Bundle obbligatorio a partire da 129€/anno a stabile imputato a bilancio condominiale ex Art 1130 c.c.). Sono disponibili il "Bundle Compliance Base" (129€) e il "Bundle Premium App" (199€) per l'accesso ai condòmini.
+              </p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
       
       {/* Vision Section */}
       <div className="max-w-4xl mx-auto text-center bg-gradient-to-br from-blue-900 to-indigo-900 rounded-[3rem] p-12 md:p-20 text-white shadow-2xl relative overflow-hidden">

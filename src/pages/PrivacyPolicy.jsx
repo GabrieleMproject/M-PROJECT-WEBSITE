@@ -33,12 +33,17 @@ export default function PrivacyPolicy() {
             I dati personali raccolti per le richieste di contatto saranno conservati per il tempo strettamente necessario a gestire la richiesta medesima e per eventuali successivi adempimenti di legge o commerciali, qualora segua un rapporto contrattuale.
           </p>
 
-          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">4. Comunicazione a Terzi e Trasferimento</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">4. DPA (Data Processing Agreement) per l'uso del software CondoFAST</h2>
+          <p>
+            Nel caso di adozione del gestionale CondoFAST da parte dello Studio (Titolare del trattamento), M PROJECT S.R.L. opera in qualità di Responsabile del Trattamento (Data Processor). Si specifica che M Project SRL opererà come responsabile anche per il trattamento dei dati dei condòmini tramite l'App Condòmini e il servizio di Voto Live qualora l'amministratore attivi lo specifico 'Bundle Premium App' per i propri stabili.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">5. Comunicazione a Terzi e Trasferimento</h2>
           <p>
             I tuoi dati non saranno diffusi né venduti a terzi. Potranno essere comunicati a soggetti esterni che operano per conto del Titolare (es. fornitori di servizi di hosting o email, come Vercel o Resend) designati come Responsabili del Trattamento. I server si trovano prevalentemente all'interno dell'Unione Europea.
           </p>
 
-          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">5. Diritti dell'Interessato</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">6. Diritti dell'Interessato</h2>
           <p>
             In ogni momento puoi esercitare i tuoi diritti (Art. 15-22 GDPR) tra cui il diritto di accedere ai tuoi dati, chiederne la rettifica, la cancellazione, la limitazione o opporti al loro trattamento. Per esercitare tali diritti puoi scrivere a <strong>info@mprojectsrl.it</strong>.
           </p>
