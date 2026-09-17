@@ -12,6 +12,9 @@ export default function Navbar() {
         <Link to="/condofast" className="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors">
           CondoFAST
         </Link>
+        <a href="/condofast#pricing" className="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors">
+          Prezzi
+        </a>
         <Link to="/contact" className="text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-full transition-colors shadow-md">
           Contattaci
         </Link>

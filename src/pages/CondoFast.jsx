@@ -91,6 +91,63 @@ export default function CondoFast() {
         </div>
       </div>
 
+      {/* Modello Bundle Condòmini */}
+      <div className="max-w-5xl mx-auto mb-24 px-4">
+        <div className="bg-blue-50 border border-blue-100 rounded-3xl p-8 md:p-12 shadow-inner">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">L'infrastruttura digitale per i tuoi condomìni</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Per accedere alle tariffe "Cloud Integrato", lo Studio attiva sui propri condomìni uno dei seguenti pacchetti annuali, imputati regolarmente a bilancio condominiale (ex Art. 1130 c.c.).
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Bundle Compliance */}
+            <div className="bg-white rounded-2xl p-6 md:p-8 shadow-md border-t-4 border-blue-400 flex flex-col">
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">Bundle Compliance Base</h3>
+              <div className="text-3xl font-black text-blue-600 mb-4">129€<span className="text-base font-normal text-gray-500"> /anno a condominio</span></div>
+              <p className="text-gray-600 mb-6 flex-grow">
+                Il pacchetto fondamentale per la compliance normativa e l'efficienza dello Studio.
+              </p>
+              <ul className="space-y-3 mb-6">
+                <li className="flex items-start">
+                  <ShieldCheck className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" />
+                  <span className="text-sm text-gray-700">Conformità GDPR e conservazione cloud sostitutiva</span>
+                </li>
+                <li className="flex items-start">
+                  <Cpu className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" />
+                  <span className="text-sm text-gray-700">Open Banking per Riconciliazione Automatica e flussi PSD2</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Bundle Premium */}
+            <div className="bg-white rounded-2xl p-6 md:p-8 shadow-xl border-t-4 border-indigo-600 flex flex-col transform md:-translate-y-2">
+              <div className="inline-block bg-indigo-100 text-indigo-800 text-xs font-bold px-3 py-1 rounded-full mb-3 w-max">IL PIÙ SCELTO DAI CONDÒMINI</div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">Bundle Premium App</h3>
+              <div className="text-3xl font-black text-indigo-600 mb-4">199€<span className="text-base font-normal text-gray-500"> /anno a condominio</span></div>
+              <p className="text-gray-600 mb-6 flex-grow">
+                Trasparenza totale per i condòmini e drastica riduzione delle chiamate in Studio.
+              </p>
+              <ul className="space-y-3 mb-6">
+                <li className="flex items-start">
+                  <ShieldCheck className="h-5 w-5 text-indigo-500 mr-2 flex-shrink-0 mt-0.5" />
+                  <span className="text-sm text-gray-700">Tutto quello che c'è nel Bundle Compliance Base</span>
+                </li>
+                <li className="flex items-start">
+                  <Building2 className="h-5 w-5 text-indigo-500 mr-2 flex-shrink-0 mt-0.5" />
+                  <span className="text-sm text-gray-700">App Condòmini iOS/Android (avvisi, rate, pagamenti in-app 1-Click)</span>
+                </li>
+                <li className="flex items-start">
+                  <CloudLightning className="h-5 w-5 text-indigo-500 mr-2 flex-shrink-0 mt-0.5" />
+                  <span className="text-sm text-gray-700">Piattaforma di Voto Live in Assemblea integrata</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Pricing Section - Doppio Binario */}
       <div id="pricing" className="max-w-6xl mx-auto mb-24 scroll-mt-28">
         <div className="text-center mb-16">
