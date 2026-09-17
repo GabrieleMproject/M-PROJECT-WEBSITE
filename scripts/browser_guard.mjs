@@ -8,7 +8,7 @@ import os from 'os';
 let puppeteer;
 try {
   puppeteer = (await import('puppeteer-core')).default;
-} catch (e) {
+} catch {
   try {
     puppeteer = (await import('../../CONDOFAST.IT/Software/CondoAI2/node_modules/puppeteer-core/lib/esm/puppeteer/puppeteer-core.js')).default;
   } catch (e2) {
@@ -80,7 +80,7 @@ export async function launchIsolatedBrowser(options = {}) {
   browser.close = async () => {
     try {
       await originalClose();
-    } catch (e) {
+    } catch {
       // ignore
     }
     try {

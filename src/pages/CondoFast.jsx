@@ -1,7 +1,7 @@
 import React from 'react';
 import { Building2, CloudLightning, ShieldCheck, Cpu, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import CondoFastLogo, { CondoFastIcon } from '../components/CondoFastLogo';
+import CondoFastLogo from '../components/CondoFastLogo';
 
 export default function CondoFast() {
   const features = [
@@ -40,20 +40,20 @@ export default function CondoFast() {
         <div className="inline-block px-4 py-1.5 rounded-full bg-blue-100 text-blue-700 font-semibold text-sm mb-4">
           La rivoluzione per gli amministratori
         </div>
-        <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-gray-900">
+        <h1 className="text-4xl md:text-7xl font-extrabold tracking-tight text-gray-900 leading-tight">
           Amministra in modo intelligente. <br className="hidden md:block"/>
           <span className="text-blue-600">Scopri CondoFAST.</span>
         </h1>
         <p className="text-xl md:text-2xl text-gray-600 font-light max-w-3xl mx-auto leading-relaxed">
           Il SaaS definitivo per la gestione condominiale. Progettato per abbattere i tempi burocratici e rimettere al centro il valore del tuo lavoro.
         </p>
-        <div className="pt-8">
-          <a href="https://condofast.it" target="_blank" rel="noopener noreferrer" className="inline-flex items-center space-x-2 bg-blue-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-blue-700 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+        <div className="pt-8 flex flex-col md:flex-row items-center justify-center gap-4">
+          <a href="https://condofast.it" target="_blank" rel="noopener noreferrer" className="w-full md:w-auto flex justify-center items-center space-x-2 bg-blue-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-blue-700 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
             <span>Richiedi guida e prova gratuita</span>
             <ArrowRight className="h-5 w-5" />
           </a>
           {/* Secondary CTA suggestion */}
-          <a href="#features" className="inline-flex items-center space-x-2 text-gray-600 px-8 py-4 rounded-full font-medium text-lg hover:bg-gray-100 transition-all duration-300 ml-4">
+          <a href="#features" className="w-full md:w-auto flex justify-center items-center space-x-2 text-gray-600 px-8 py-4 rounded-full font-medium text-lg hover:bg-gray-100 transition-all duration-300">
             <span>Scopri come funziona</span>
           </a>
         </div>

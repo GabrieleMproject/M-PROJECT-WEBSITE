@@ -8,8 +8,8 @@ export default function Navbar() {
       <Link to="/" className="flex items-center hover:opacity-80 transition-opacity">
         <img src={logo} alt="M PROJECT S.R.L. Logo" className="h-8 md:h-10 w-auto" />
       </Link>
-      <div className="flex items-center space-x-6">
-        <Link to="/condofast" className="hidden md:block text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors">
+      <div className="flex items-center space-x-3 md:space-x-6">
+        <Link to="/condofast" className="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors">
           CondoFAST
         </Link>
         <Link to="/contact" className="text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-full transition-colors shadow-md">

@@ -16,7 +16,7 @@ export default function Footer() {
           P.IVA: 04314510134<br />
           PEC: infomproject@pec.it
         </p>
-        <div className="pt-4 flex justify-center space-x-6 text-xs text-gray-500">
+        <div className="pt-4 flex flex-wrap justify-center gap-4 text-xs text-gray-500">
           <Link to="/condofast" className="hover:text-blue-400 transition-colors">CondoFAST</Link>
           <Link to="/privacy-policy" className="hover:text-gray-300 transition-colors">Privacy Policy</Link>
           <Link to="/termini-e-condizioni" className="hover:text-gray-300 transition-colors">Termini e Condizioni</Link>

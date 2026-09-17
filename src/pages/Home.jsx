@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import CondoFastLogo, { CondoFastIcon } from '../components/CondoFastLogo';
+import CondoFastLogo from '../components/CondoFastLogo';
 
 export default function Home() {
   return (
     <main className="flex-grow pt-32 pb-16 px-6">
       <div className="max-w-5xl mx-auto text-center space-y-8">
-        <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-gray-900">
+        <h1 className="text-4xl md:text-7xl font-extrabold tracking-tight text-gray-900 leading-tight">
           Sviluppiamo il futuro. <br className="hidden md:block"/>
           <span className="text-gray-400">Oggi.</span>
         </h1>
