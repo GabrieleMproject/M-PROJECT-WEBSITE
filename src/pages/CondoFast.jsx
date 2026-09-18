@@ -130,7 +130,6 @@ export default function CondoFast() {
       {/* Hero Pricing Card */}
       <div className="max-w-5xl mx-auto mb-8 bg-white border-2 border-green-500 rounded-3xl overflow-hidden shadow-2xl relative">
         <div className="bg-green-50 p-6 text-center border-b border-green-100">
-          <span className="inline-block bg-green-500 text-white font-bold px-4 py-1.5 rounded-full text-xs uppercase tracking-wider mb-3">Miglior Scelta per lo Studio</span>
           <h3 className="text-3xl font-bold text-green-700 mb-2">Piano Cloud Integrato</h3>
           <p className="text-green-800 font-medium max-w-2xl mx-auto">Innovazione e digitalizzazione per i tuoi stabili, massima efficienza economica per il tuo Studio.</p>
         </div>
