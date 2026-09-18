@@ -94,133 +94,99 @@ export default function CondoFast() {
       </div>
 
       
-      {/* Toggle Mensile/Annuale */}
-      <div className="text-center mb-8">
-        <div className="inline-flex items-center p-1 bg-gray-100 rounded-full mb-4">
-          <button
-            onClick={() => setBillingMode('monthly')}
-            className={`px-6 py-2 rounded-full text-sm font-semibold transition-all ${
-              billingMode === 'monthly'
-                ? 'bg-white text-gray-900 shadow-sm'
-                : 'text-gray-500 hover:text-gray-700'
-            }`}
-          >
-            Mensile
-          </button>
-          <button
-            onClick={() => setBillingMode('annual')}
-            className={`px-6 py-2 rounded-full text-sm font-semibold transition-all flex items-center ${
-              billingMode === 'annual'
-                ? 'bg-white text-gray-900 shadow-sm'
-                : 'text-gray-500 hover:text-gray-700'
-            }`}
-          >
-            Annuale <span className="ml-2 bg-green-500 text-white text-xs px-2 py-0.5 rounded-full">+ Migrazione Inclusa</span>
-          </button>
+      {/* Nuovo blocco Prezzi */}
+      <div id="pricing" className="max-w-6xl mx-auto mb-24 scroll-mt-28">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">Un unico software, tutta la potenza.</h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Abbiamo omologato le funzionalità: nessun blocco. Scegli semplicemente in base alla dimensione del tuo studio.
+            Il risparmio è garantito passando all'Ecosistema Cloud Integrato.
+          </p>
         </div>
-        <p className="text-sm text-gray-500 transition-all">
-          {billingMode === 'annual' ? (
-            <><span className="text-green-600 font-semibold">✓ Migrazione assistita inclusa.</span> Fatturazione in un'unica soluzione annuale (12 mesi).</>
-          ) : (
-            <>Nessun vincolo, paghi di mese in mese.</>
-          )}
-        </p>
-      </div>
 
-      {/* Hero Pricing Card */}
-      <div className="max-w-5xl mx-auto mb-8 bg-white border-2 border-green-500 rounded-3xl overflow-hidden shadow-2xl relative">
-        <div className="bg-green-50 p-6 text-center border-b border-green-100">
-          <h3 className="text-3xl font-bold text-green-700 mb-2">Piano Cloud Integrato</h3>
-          <p className="text-green-800 font-medium max-w-2xl mx-auto">Innovazione e digitalizzazione per i tuoi stabili, massima efficienza economica per il tuo Studio.</p>
-        </div>
-        
-        <div className="p-8 md:p-12">
-          <div className="grid md:grid-cols-3 gap-6 text-center max-w-4xl mx-auto mb-12">
-            {/* Base */}
-            <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
-              <div className="text-gray-500 font-semibold mb-2">Base <span className="block font-normal text-sm mt-1">Fino a 50 condomini</span></div>
-              <div className="text-3xl font-black text-green-600">
-                {billingMode === 'annual' ? '238,80€' : '19,90€'}
-                <span className="text-sm font-normal text-gray-500">{billingMode === 'annual' ? '/anno' : '/mese'}</span>
-              </div>
-            </div>
-            {/* Studio */}
-            <div className="p-6 bg-green-50 rounded-2xl border-2 border-green-300 relative transform md:scale-105 shadow-lg">
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-green-600 text-white text-xs font-bold px-3 py-0.5 rounded-full whitespace-nowrap">PIÙ POPOLARE</div>
-              <div className="text-gray-600 font-semibold mb-2">Studio <span className="block font-normal text-sm mt-1">Fino a 100 condomini</span></div>
-              <div className="text-4xl font-black text-green-600 my-2">
-                {billingMode === 'annual' ? '358,80€' : '29,90€'}
-                <span className="text-base font-normal text-gray-500">{billingMode === 'annual' ? '/anno' : '/mese'}</span>
-              </div>
-            </div>
-            {/* Pro */}
-            <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
-              <div className="text-gray-500 font-semibold mb-2">Professional <span className="block font-normal text-sm mt-1">Fino a 200 condomini</span></div>
-              <div className="text-3xl font-black text-green-600">
-                {billingMode === 'annual' ? '718,80€' : '59,90€'}
-                <span className="text-sm font-normal text-gray-500">{billingMode === 'annual' ? '/anno' : '/mese'}</span>
-              </div>
-            </div>
+        {/* Toggle Mensile/Annuale */}
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center p-1 bg-gray-100 rounded-full mb-4">
+            <button
+              onClick={() => setBillingMode('monthly')}
+              className={`px-6 py-2 rounded-full text-sm font-semibold transition-all ${
+                billingMode === 'monthly'
+                  ? 'bg-white text-gray-900 shadow-sm'
+                  : 'text-gray-500 hover:text-gray-700'
+              }`}
+            >
+              Mensile
+            </button>
+            <button
+              onClick={() => setBillingMode('annual')}
+              className={`px-6 py-2 rounded-full text-sm font-semibold transition-all flex items-center ${
+                billingMode === 'annual'
+                  ? 'bg-white text-gray-900 shadow-sm'
+                  : 'text-gray-500 hover:text-gray-700'
+              }`}
+            >
+              Annuale <span className="ml-2 bg-green-500 text-white text-xs px-2 py-0.5 rounded-full">+ Migrazione Inclusa</span>
+            </button>
           </div>
+        </div>
 
-          {/* Explanation */}
-          <div className="border-t border-gray-100 pt-10">
-            <h4 className="text-center text-xl font-bold text-gray-900 mb-8">Come funziona l'Ecosistema Cloud Integrato</h4>
-            <div className="grid md:grid-cols-3 gap-8 mb-10 text-left">
-              <div className="flex gap-4 items-start">
-                <div className="bg-green-100 text-green-600 w-10 h-10 rounded-full flex items-center justify-center font-bold flex-shrink-0">1</div>
-                <div>
-                  <div className="font-bold text-gray-900 mb-1">Piattaforma Centralizzata</div>
-                  <div className="text-sm text-gray-600 leading-relaxed">Lo Studio accede all'infrastruttura CondoFAST a condizioni B2B agevolate, ottimizzando l'intera gestione contabile.</div>
+        <div className="grid lg:grid-cols-3 gap-8">
+          {[
+            { name: 'Base', limit: 'Fino a 50 condomini', tradM: '99', tradA: '1.188', cloudM: '19,90', cloudA: '238,80', pop: false },
+            { name: 'Studio', limit: 'Fino a 100 condomini', tradM: '199', tradA: '2.388', cloudM: '29,90', cloudA: '358,80', pop: true },
+            { name: 'Professional', limit: 'Fino a 200 condomini', tradM: '299', tradA: '3.588', cloudM: '59,90', cloudA: '718,80', pop: false }
+          ].map((plan, i) => (
+            <div key={i} className={`relative bg-white rounded-3xl p-8 border ${plan.pop ? 'border-green-500 shadow-2xl scale-105 z-10' : 'border-gray-200 shadow-lg'} flex flex-col`}>
+              {plan.pop && <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-green-500 text-white px-4 py-1 rounded-full text-sm font-bold shadow-md">PIÙ SCELTO</div>}
+              <h3 className="text-2xl font-bold text-gray-900">{plan.name}</h3>
+              <p className="text-gray-500 font-medium mb-6">{plan.limit}</p>
+              
+              <div className="mb-6 p-4 rounded-xl bg-gray-50 border border-gray-100 opacity-60">
+                <div className="text-xs text-gray-500 font-semibold mb-1 uppercase tracking-wider">Sistema Tradizionale</div>
+                <div className="text-gray-400 line-through text-xl font-bold">
+                  {billingMode === 'annual' ? plan.tradA : plan.tradM}€<span className="text-sm font-normal">/{billingMode === 'annual' ? 'anno' : 'mese'}</span>
                 </div>
               </div>
-              <div className="flex gap-4 items-start">
-                <div className="bg-blue-100 text-blue-600 w-10 h-10 rounded-full flex items-center justify-center font-bold flex-shrink-0">2</div>
-                <div>
-                  <div className="font-bold text-gray-900 mb-1">Servizi Dedicati al Condominio</div>
-                  <div className="text-sm text-gray-600 leading-relaxed">L'infrastruttura tecnologica (App, GDPR, Voto Online) viene erogata a favore dei condòmini e regolarmente imputata a bilancio (ex Art. 1130 c.c.).</div>
-                </div>
-              </div>
-              <div className="flex gap-4 items-start">
-                <div className="bg-purple-100 text-purple-600 w-10 h-10 rounded-full flex items-center justify-center font-bold flex-shrink-0">3</div>
-                <div>
-                  <div className="font-bold text-gray-900 mb-1">Valore Condiviso</div>
-                  <div className="text-sm text-gray-600 leading-relaxed">Massima trasparenza ed evoluzione digitale per i residenti, massima efficienza operativa per l'Amministratore.</div>
-                </div>
-              </div>
-            </div>
 
-            <div className="text-center">
-              <a href="https://condofast.it/app/register" className="inline-block bg-green-500 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-green-600 hover:shadow-lg transition-all hover:-translate-y-1">
-                Inizia a risparmiare ora
+              <div className="mb-8 p-6 rounded-xl bg-green-50 border border-green-100">
+                <div className="text-xs text-green-600 font-bold mb-1 uppercase tracking-wider">Cloud Integrato 🚀</div>
+                <div className="text-green-600 text-4xl font-black mb-1">
+                  {billingMode === 'annual' ? plan.cloudA : plan.cloudM}€<span className="text-lg font-normal">/{billingMode === 'annual' ? 'anno' : 'mese'}</span>
+                </div>
+                <div className="text-xs text-green-700 font-medium leading-tight">
+                  Prezzo riservato attivando i servizi digitali ai condòmini.
+                </div>
+              </div>
+
+              <a href="https://condofast.it/app/register" className={`mt-auto w-full text-center py-4 rounded-xl font-bold transition-all ${plan.pop ? 'bg-green-500 text-white hover:bg-green-600 shadow-md hover:shadow-lg' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'}`}>
+                Inizia ora
               </a>
             </div>
-            
-            <div className="mt-8 p-4 bg-gray-50 rounded-xl border border-gray-100 max-w-3xl mx-auto">
-              <p className="text-xs text-gray-500 text-center leading-relaxed">
-                <strong>Condizione di Accesso:</strong> Tariffa riservata agli Studi che adottano i pacchetti Cloud (Bundle Compliance Base 129€/anno o Premium App 199€/anno) per i propri condomìni da imputare a bilancio condominiale.
-              </p>
-            </div>
+          ))}
+        </div>
+
+        {/* Feature List */}
+        <div className="mt-16 bg-white border border-gray-200 rounded-3xl p-8 md:p-12 shadow-sm">
+          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Incluso in TUTTI i piani, senza costi extra:</h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              "Intelligenza Artificiale (OCR)",
+              "App Condòmini iOS / Android",
+              "Riconciliazione Bancaria",
+              "Modulo Fiscale (F24, CU)",
+              "Assemblea Live & Voto",
+              "Recupero Crediti Automatico",
+              "Ticket & Segnalazioni",
+              "Assistenza Prioritaria 24h"
+            ].map((feat, i) => (
+              <div key={i} className="flex items-center gap-3">
+                <ShieldCheck className="text-green-500 w-6 h-6 flex-shrink-0" />
+                <span className="text-gray-700 font-medium">{feat}</span>
+              </div>
+            ))}
           </div>
         </div>
       </div>
-
-      {/* Decoy Pricing Card */}
-      <div className="max-w-4xl mx-auto bg-gray-50 border border-gray-200 rounded-2xl p-8 text-center opacity-90 hover:opacity-100 transition-opacity mb-24">
-        <h4 className="text-lg font-bold text-gray-700 mb-2">Gestione Tradizionale (Solo Licenza Studio)</h4>
-        <p className="text-sm text-gray-500 mb-6 max-w-2xl mx-auto">La soluzione classica per gli Studi che preferiscono accentrare i costi dell'infrastruttura gestionale, senza l'attivazione di servizi Cloud aggiuntivi per i residenti.</p>
-        
-        <div className="flex flex-wrap justify-center gap-6 mb-6">
-          <div className="text-gray-900"><span className="font-bold">Base:</span> <span className="font-black ml-1 text-gray-600">{billingMode === 'annual' ? '1.188€/anno' : '99€/mese'}</span></div>
-          <div className="text-gray-900"><span className="font-bold">Studio:</span> <span className="font-black ml-1 text-gray-600">{billingMode === 'annual' ? '2.388€/anno' : '199€/mese'}</span></div>
-          <div className="text-gray-900"><span className="font-bold">Pro:</span> <span className="font-black ml-1 text-gray-600">{billingMode === 'annual' ? '3.588€/anno' : '299€/mese'}</span></div>
-        </div>
-        
-        <a href="https://condofast.it/app/register" className="inline-block px-6 py-2 border border-gray-300 text-gray-600 rounded-full font-bold hover:bg-gray-100 transition-colors text-sm">
-          Attiva Licenza Standard
-        </a>
-      </div>
-
       {/* Vision Section */}
 
       <div className="max-w-4xl mx-auto text-center bg-gradient-to-br from-blue-900 to-indigo-900 rounded-[3rem] p-12 md:p-20 text-white shadow-2xl relative overflow-hidden">
