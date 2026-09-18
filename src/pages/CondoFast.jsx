@@ -132,56 +132,77 @@ export default function CondoFast() {
 
         <div className="grid lg:grid-cols-3 gap-8">
           {[
-            { name: 'Base', limit: 'Fino a 50 condomini', tradM: '99', tradA: '1.188', cloudM: '19,90', cloudA: '238,80', pop: false },
-            { name: 'Studio', limit: 'Fino a 100 condomini', tradM: '199', tradA: '2.388', cloudM: '29,90', cloudA: '358,80', pop: true },
-            { name: 'Professional', limit: 'Fino a 200 condomini', tradM: '299', tradA: '3.588', cloudM: '59,90', cloudA: '718,80', pop: false }
+            { name: 'Base', limit: 'Fino a 50 condomini', tradM: '99', tradA: '1.188', cloudM: '19,90', cloudA: '238,80', pop: false, discount: '-80%' },
+            { name: 'Studio', limit: 'Fino a 100 condomini', tradM: '199', tradA: '2.388', cloudM: '29,90', cloudA: '358,80', pop: true, discount: '-85%' },
+            { name: 'Professional', limit: 'Fino a 200 condomini', tradM: '299', tradA: '3.588', cloudM: '59,90', cloudA: '718,80', pop: false, discount: '-80%' }
           ].map((plan, i) => (
             <div key={i} className={`relative bg-white rounded-3xl p-8 border ${plan.pop ? 'border-green-500 shadow-2xl scale-105 z-10' : 'border-gray-200 shadow-lg'} flex flex-col`}>
               {plan.pop && <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-green-500 text-white px-4 py-1 rounded-full text-sm font-bold shadow-md">PIÙ SCELTO</div>}
               <h3 className="text-2xl font-bold text-gray-900">{plan.name}</h3>
               <p className="text-gray-500 font-medium mb-6">{plan.limit}</p>
               
-              <div className="mb-6 p-4 rounded-xl bg-gray-50 border border-gray-100 opacity-60">
+              {/* Sistema Tradizionale */}
+              <div className="mb-4 p-4 rounded-xl bg-gray-50 border border-gray-200 flex flex-col items-start">
                 <div className="text-xs text-gray-500 font-semibold mb-1 uppercase tracking-wider">Sistema Tradizionale</div>
-                <div className="text-gray-400 line-through text-xl font-bold">
+                <div className="text-gray-800 text-xl font-bold mb-3">
                   {billingMode === 'annual' ? plan.tradA : plan.tradM}€<span className="text-sm font-normal">/{billingMode === 'annual' ? 'anno' : 'mese'}</span>
                 </div>
+                <a href="https://condofast.it/app/register?type=trad" className="text-sm font-semibold text-gray-600 border border-gray-300 px-4 py-1.5 rounded-lg hover:bg-gray-100 transition-colors w-full text-center">
+                  Attiva Tradizionale
+                </a>
               </div>
 
-              <div className="mb-8 p-6 rounded-xl bg-green-50 border border-green-100">
-                <div className="text-xs text-green-600 font-bold mb-1 uppercase tracking-wider">Cloud Integrato 🚀</div>
-                <div className="text-green-600 text-4xl font-black mb-1">
+              {/* Cloud Integrato */}
+              <div className="mb-4 p-6 rounded-xl bg-green-50 border-2 border-green-200 relative flex flex-col flex-grow">
+                <div className="absolute -top-3 -right-3 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md transform rotate-3">
+                  {plan.discount}
+                </div>
+                <div className="text-xs text-green-700 font-bold mb-1 uppercase tracking-wider flex items-center gap-1">
+                  Cloud Integrato <CloudLightning className="w-4 h-4" />
+                </div>
+                <div className="text-green-600 text-4xl font-black mb-3">
                   {billingMode === 'annual' ? plan.cloudA : plan.cloudM}€<span className="text-lg font-normal">/{billingMode === 'annual' ? 'anno' : 'mese'}</span>
                 </div>
-                <div className="text-xs text-green-700 font-medium leading-tight">
+                <div className="text-xs text-green-800 font-medium leading-tight mb-4 flex-grow">
                   Prezzo riservato attivando i servizi digitali ai condòmini.
                 </div>
+                <a href="https://condofast.it/app/register?type=cloud" className={`w-full text-center py-3 rounded-xl font-bold transition-all ${plan.pop ? 'bg-green-500 text-white hover:bg-green-600 shadow-md' : 'bg-green-100 text-green-800 hover:bg-green-200'}`}>
+                  Attiva Cloud Integrato
+                </a>
               </div>
-
-              <a href="https://condofast.it/app/register" className={`mt-auto w-full text-center py-4 rounded-xl font-bold transition-all ${plan.pop ? 'bg-green-500 text-white hover:bg-green-600 shadow-md hover:shadow-lg' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'}`}>
-                Inizia ora
-              </a>
             </div>
           ))}
         </div>
 
         {/* Feature List */}
         <div className="mt-16 bg-white border border-gray-200 rounded-3xl p-8 md:p-12 shadow-sm">
-          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Incluso in TUTTI i piani, senza costi extra:</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Incluso nella licenza Software per lo Studio:</h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {[
               "Intelligenza Artificiale (OCR)",
-              "App Condòmini iOS / Android",
               "Riconciliazione Bancaria",
               "Modulo Fiscale (F24, CU)",
-              "Assemblea Live & Voto",
               "Recupero Crediti Automatico",
               "Ticket & Segnalazioni",
               "Assistenza Prioritaria 24h"
             ].map((feat, i) => (
               <div key={i} className="flex items-center gap-3">
-                <ShieldCheck className="text-green-500 w-6 h-6 flex-shrink-0" />
+                <ShieldCheck className="text-gray-700 w-6 h-6 flex-shrink-0" />
                 <span className="text-gray-700 font-medium">{feat}</span>
+              </div>
+            ))}
+          </div>
+          
+          <h3 className="text-xl font-bold text-green-700 mb-6 text-center border-t border-gray-100 pt-8">Funzionalità sbloccate attivando i Bundle Condominiali:</h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              "App Condòmini iOS / Android",
+              "Assemblea Live & Voto Smartphone",
+              "Generazione Registro GDPR & Privacy"
+            ].map((feat, i) => (
+              <div key={i} className="flex items-center gap-3">
+                <CloudLightning className="text-green-500 w-6 h-6 flex-shrink-0" />
+                <span className="text-green-800 font-semibold">{feat}</span>
               </div>
             ))}
           </div>
