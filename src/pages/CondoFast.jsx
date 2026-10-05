@@ -49,8 +49,8 @@ export default function CondoFast() {
           Il SaaS definitivo per la gestione condominiale. Progettato per abbattere i tempi burocratici e rimettere al centro il valore del tuo lavoro.
         </p>
         <div className="pt-8 flex flex-col md:flex-row items-center justify-center gap-4">
-          <a href="https://condofast.it" target="_blank" rel="noopener noreferrer" className="w-full md:w-auto flex justify-center items-center space-x-2 bg-blue-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-blue-700 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-            <span>Richiedi guida e prova gratuita</span>
+          <a href="https://condofast.it/chi-siamo.html#contatti" target="_blank" rel="noopener noreferrer" className="w-full md:w-auto flex justify-center items-center space-x-2 bg-blue-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-blue-700 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+            <span>Prenota Demo Gratuita</span>
             <ArrowRight className="h-5 w-5" />
           </a>
           {/* Secondary CTA suggestion */}
