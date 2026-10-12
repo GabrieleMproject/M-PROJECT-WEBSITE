@@ -1,0 +1,16 @@
+{
+  "webcredentials": {
+    "apps": [
+      "G2BF8MS332.it.mprojectsrl.condofast"
+    ]
+  },
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "G2BF8MS332.it.mprojectsrl.condofast",
+        "paths": [ "*" ]
+      }
+    ]
+  }
+}
